@@ -78,3 +78,14 @@ function validateForm() {
         return true
     }
 }
+
+function validateFform() {
+    let submissionError = document.getElementById('submission-error')
+    if ( !validateEmail() || !validatePassword() ) {
+        submissionError.innerHTML = "please resolve the errors"
+        return false
+    } else {
+        submissionError.innerHTML = ""
+        return true
+    }
+}
